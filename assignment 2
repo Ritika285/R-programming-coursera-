@@ -3,19 +3,20 @@
 ## creating a matrix object to cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-        Z <- NULL
-        set <- function(y) {
-                x <<- y
-                Z <<- NULL
-        }
-        get <- function() x
-        setInverse <- function(inverse) Z <<- inverse
-        getInverse <- function() Z
-        list(set = set,
-             get = get,
-             setInverse = setInverse,
-             getInverse = getInverse)
+  Z <- NULL
+  set <- function(y) {
+    x <<- y
+    Z <<- NULL
+  }
+  get <- function() x
+  setInverse <- function(inverse) Z <<- inverse
+  getInverse <- function() Z
+  list(set = set,
+       get = get,
+       setInverse = setInverse,
+       getInverse = getInverse)
 }
+
 
 
 ## This function will figure out the inverse of the matrix.
